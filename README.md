@@ -8,7 +8,7 @@ This repository contains the full source materials, presentation slides, and the
 
 ## 👥 Course & Group Information
 
-- **Course:** CSE 3811 - Artificial Intelligence Laboratory (Section A)
+- **Course:** CSE 3811 - Artificial Intelligence Laboratory 
 - **Institution:** Department of Computer Science and Engineering, United International University (UIU)
 - **Instructor:** Kazi Fahim Tahmid (Lecturer, Department of CSE, UIU)
 - **Group:** Group 10
@@ -44,4 +44,20 @@ This repository contains the full source materials, presentation slides, and the
 
 ---
 
-## 📊 Pipeline & Architecture
+## 📊 Pipeline Overview
+
+1. **Player Interaction:** The player interacts with the web board UI to initiate a move[cite: 6].
+2. **Frontend Request:** The browser sends an HTTP JSON POST request to the Flask API endpoints[cite: 6, 10].
+3. **Session Management:** `GameSession` validates turn order, game state history, and current move legality[cite: 6].
+4. **Engine Routing:** The engine router directs the request to the active selected AI engine[cite: 6].
+5. **Search Execution:** The AI engine queries the **Rules Core** for move validation and evaluates positions using the **Static Evaluator**[cite: 6].
+6. **Telemetry & Response:** The engine returns a standardized `SearchResult` payload containing the optimal move along with real-time performance telemetry (expanded nodes, time taken, search depth, and current game phase) back to the client interface[cite: 6, 10].
+
+---
+
+## 🛠️ How to Get Started
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/sadiamim329/AI-Project.git](https://github.com/sadiamim329/AI-Project.git)
+cd AI-Project
